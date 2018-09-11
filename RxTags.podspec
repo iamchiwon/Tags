@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RxTags'
-  s.version          = '0.1.0'
+  s.version          = '0.1.8'
   s.summary          = 'Dynamic Tag Append, Remove, Insert with RxSwift extension'
 
   s.description      = <<-DESC
