@@ -1,9 +1,60 @@
-# Tags
+# RxTags
 
-[![Version](https://img.shields.io/cocoapods/v/Tags.svg?style=flat)](http://cocoapods.org/pods/Tags)
-[![License](https://img.shields.io/cocoapods/l/Tags.svg?style=flat)](http://cocoapods.org/pods/Tags)
-[![Platform](https://img.shields.io/cocoapods/p/Tags.svg?style=flat)](http://cocoapods.org/pods/Tags)
+[![Version](https://img.shields.io/cocoapods/v/Tags.svg?style=flat)](http://cocoapods.org/pods/RxTags)
+[![License](https://img.shields.io/cocoapods/l/Tags.svg?style=flat)](http://cocoapods.org/pods/RxTags)
+[![Platform](https://img.shields.io/cocoapods/p/Tags.svg?style=flat)](http://cocoapods.org/pods/RxTags)
 [![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
+
+## RxExtensions
+
+- Based on [`Tags`](https://github.com/pikachu987/Tags) Project (version continues)
+
+### Cocoapods
+
+RxTags is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'RxTags'
+```
+
+### Reactive extension
+
+```swift
+class ViewController: UIViewController{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let tagsView = TagsView()
+
+        tagsView.touchAction()
+                .subscribe(onNext: { tagButton in 
+                    // Tag Touch Action
+                })
+                .disposed(by: disposeBag)
+
+        tagsView.lastTagAction()
+                .subscribe(onNext: { tagButton in 
+                    // Last Tag Touch Action
+                })
+                .disposed(by: disposeBag)
+
+        tagsView.changeHeight()
+                .subscribe(onNext: { height in 
+                    // TagsView Change Height
+                })
+                .disposed(by: disposeBag)
+    }
+}
+```
+
+<br/>
+
+---
+
+<br/>
+
+# Tags
 
 ## Introduce
 
