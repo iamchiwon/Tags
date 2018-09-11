@@ -48,6 +48,10 @@ class ViewController: UIViewController{
 }
 ```
 
+## Author
+
+iamchiwon, iamchiwon@gmail.com
+
 <br/>
 
 ---
