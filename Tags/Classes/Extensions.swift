@@ -21,7 +21,7 @@
 import UIKit
 
 extension UIView {
-    func leadingConstraint(_ item: UIView, attribute: NSLayoutAttribute, constant: CGFloat) -> NSLayoutConstraint {
+    func leadingConstraint(_ item: UIView, attribute: NSLayoutConstraint.Attribute, constant: CGFloat) -> NSLayoutConstraint {
         return NSLayoutConstraint(
             item: item,
             attribute: attribute,
@@ -45,7 +45,7 @@ extension UIView {
         )
     }
     
-    func topConstraint(_ item: UIView, attribute: NSLayoutAttribute, constant: CGFloat) -> NSLayoutConstraint {
+    func topConstraint(_ item: UIView, attribute: NSLayoutConstraint.Attribute, constant: CGFloat) -> NSLayoutConstraint {
         return NSLayoutConstraint(
             item: item,
             attribute: attribute,
@@ -66,6 +66,13 @@ extension UIView {
             attribute: .bottom,
             multiplier: 1,
             constant: constant
-        )
+        ).priority(990)
+    }
+}
+
+extension NSLayoutConstraint {
+    func priority(_ value: CGFloat) -> NSLayoutConstraint {
+        self.priority = UILayoutPriority(Float(value))
+        return self
     }
 }
