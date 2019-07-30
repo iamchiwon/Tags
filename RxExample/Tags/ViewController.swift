@@ -286,3 +286,56 @@ class ViewController: UIViewController {
 
 }
 
+        self.tagsView.paddingLeftRight = CGFloat(sender.value)
+    }
+
+    @IBAction private func paddingTopBottomAction(_ sender: UIStepper) {
+        self.tagsView.paddingTopBottom = CGFloat(sender.value)
+    }
+
+    @IBAction private func marginLeftRightAction(_ sender: UIStepper) {
+        self.tagsView.marginLeftRight = CGFloat(sender.value)
+    }
+
+    @IBAction private func marginTopBottomAction(_ sender: UIStepper) {
+        self.tagsView.marginTopBottom = CGFloat(sender.value)
+    }
+
+    @IBAction private func fgBlackAction(_ sender: UIButton) {
+        self.tagsView.tagTitleColor = UIColor.black
+        self.tagsView.tagLayerColor = UIColor.black
+    }
+
+    @IBAction private func fgGrayAction(_ sender: UIButton) {
+        self.tagsView.tagTitleColor = UIColor.gray
+        self.tagsView.tagLayerColor = UIColor.gray
+    }
+
+    @IBAction private func bgWhiteAction(_ sender: UIButton) {
+        self.tagsView.tagBackgroundColor = UIColor.white
+    }
+
+    @IBAction private func bgGrayAction(_ sender: UIButton) {
+        self.tagsView.tagBackgroundColor = UIColor.gray
+    }
+
+    @IBAction private func lastFgBlackAction(_ sender: UIButton) {
+        self.tagsView.lastTagTitleColor = UIColor.black
+        self.tagsView.lastTagLayerColor = UIColor.black
+    }
+
+    @IBAction private func lastFgGrayAction(_ sender: UIButton) {
+        self.tagsView.lastTagTitleColor = UIColor.gray
+        self.tagsView.lastTagLayerColor = UIColor.gray
+    }
+
+    @IBAction private func lastBgWhiteAction(_ sender: UIButton) {
+        self.tagsView.lastTagBackgroundColor = UIColor.white
+    }
+
+    @IBAction private func lastBgGrayAction(_ sender: UIButton) {
+        self.tagsView.lastTagBackgroundColor = UIColor.gray
+    }
+
+}
+
